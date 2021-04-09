@@ -12,9 +12,9 @@ class Band {
 
   //Regresa una nueva instancia de la clase
   factory Band.fromMap(Map<String, dynamic> obj) => Band(
-    id: obj['id'],
-    name: obj['name'],
-    votes: obj['votes'],
+    id     : obj.containsKey('id') ? obj['id']     : 'no-id',
+    name   : obj.containsKey('id') ? obj['name']   : 'no-name',
+    votes  : obj.containsKey('id') ? obj['votes']  : 'no-votes',
   );
 
 }
